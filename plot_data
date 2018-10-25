@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -x
+
+(cd data
+for file in *.log; do
+  png=${file%%.log}
+  gnuplot -e "set terminal png; plot \"$file\" with lines" > "$png"
+done)
