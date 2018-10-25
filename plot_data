@@ -5,5 +5,5 @@ set -x
 (cd data
 for file in *.log; do
   png=${file%%.log}
-  gnuplot -e "set terminal png; plot \"$file\" with lines" > "$png"
+  gnuplot -e "set terminal png; set ylabel 'ms'; set xlabel 'requests'; plot \"$file\" with lines" > "$png"
 done)
