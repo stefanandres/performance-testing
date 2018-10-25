@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+set -e
+
+apt update
+apt install -y nginx curl
+cp test* /var/www/html/
+curl -I http://localhost/test_small.png
+curl -I http://localhost/test_1mb.png
+
