@@ -3,4 +3,4 @@
 set -x
 
 log_url=${1//\//-}
-httping -Z -f "$1" -m -G -c 1000 | tee "data/$HOSTNAME-$(date '+%F-%H:%M:%S')-${log_url}".log
+httping -Z -f "$1" -m -G -c 5000 | tee "data/$HOSTNAME-$(date '+%F-%H:%M:%S')-${log_url}".log
