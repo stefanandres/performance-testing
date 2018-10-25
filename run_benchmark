@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+set -x
+
+httping -Z -f "$1" -m -G -c 1000 | tee data/$HOSTNAME-$(date '+%F-%H:%M:%S').log
