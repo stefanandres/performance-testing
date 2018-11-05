@@ -2,7 +2,7 @@
 
 set -x
 
-urls=(http://195.192.128.25:32137/test_1mb.png http://195.192.128.25:32137/test_small.png)
+urls=(http://185.56.130.154/test_small.png http://185.56.130.154/test_1mb.png http://195.192.129.214/test_small.png http://195.192.129.214/test_1mb.png http://195.192.129.131/test_small.png http://195.192.129.131/test_1mb.png http://37.44.4.157/test_small.png http://37.44.4.157/test_1mb.png http://151.252.40.253/test_small.png http://151.252.40.253/test_1mb.png http://35.234.113.209/test_small.png http://35.234.113.209/test_1mb.png http://195.192.128.25:32137/test_1mb.png http://195.192.128.25:32137/test_small.png)
 
 for url in "${urls[@]}"; do
   ./run_benchmark "$url"
